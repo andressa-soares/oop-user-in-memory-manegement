@@ -2,6 +2,7 @@ package service;
 
 import model.User;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
 
@@ -51,6 +52,8 @@ public class UserService {
             System.out.println("\nNo users registered yet.");
             return;
         }
+
+        userList.sort(Comparator.comparing(User::getName, String.CASE_INSENSITIVE_ORDER));
 
         for (User user : userList) {
             System.out.println("\nName: " + user.getName());
