@@ -1,6 +1,6 @@
 package br.com;
 
-import service.UserService;
+import br.com.service.UserService;
 import java.util.Scanner;
 
 public class Main {
